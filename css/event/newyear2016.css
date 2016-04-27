@@ -1,0 +1,41 @@
+@charset "utf-8";
+.md-banner{z-index:1;}
+.md-newyear{margin-top:-20px;}
+.md-title{text-align:center;z-index:2;}
+.md-title img{width:100px;}
+.md-rule{position:relative;padding:0 20px 85px;color:#000;}
+.md-rule .hd{position:relative;height:41px;text-align:center;}
+.md-rule .hd i{width:100%;height:0;border-top:4px solid #ef5252;position:absolute;top:20px;left:0;}
+.md-rule .hd .title{position:absolute;top:0;left:0;width:100%;font-size:16px;line-height:40px;}
+.md-rule .hd em{display:inline-block;background-color:#f4f4f4;font-size:20px;padding:0 50px;}
+.md-rule .bd{font-size:14px;color:#333;line-height:24px;}
+.md-rule .bd .title{text-align:center;font-size:16px;}
+
+.md-newyear{position:relative;margin-top:-35px;}
+.ud-bonus{display:block;width:200px;height:80px;text-align:center;background:url(../../images/event/newyear2016/bonusbg.png) no-repeat center bottom/200px auto;cursor:pointer;}
+.ud-bonus .bonushd{line-height:26px;padding-top:4px;font-size:16px;color:#fff}
+.ud-bonus .bonusbd{line-height:24px;width:160px;margin:0 auto;background-color:#cd3939;font-size:14px;color:#fff78c;}
+.ud-bonus .bonusdesc{line-height:22px;font-size:12px;color:#a11c1c;}
+.ud-bonus.over{background:url(../../images/event/newyear2016/bonusbg3.png) no-repeat center bottom;}
+.ud-bonus.over .bonusbd{background-color:#838383;color:#c5c5c5;}
+.ud-bonus.over .bonusdesc{color:#5e5e5e;}
+.md-bonus{position:relative;}
+.md-bonus .bd li{position:relative;}
+.md-bonus .bd li .ud-bonus{margin:0 auto;}
+.md-bonus .bd li img{width:100%;}
+.md-bonus .hd{width:100%;position:absolute;z-index:2;bottom:15px;left:0;height:18px;line-height:18px;text-align:center}
+.md-bonus .hd ul li{cursor:pointer;display:inline-block;width:10px;height:10px;background-color:rgba(200,200,200,.6);margin:0 4px;border-radius:12px;overflow:hidden;font-size:0;}
+.md-bonus .hd li.on{background:#ff7610;}
+.md-bonus .prev,.md-bonus .next{position:absolute;top:0;width:70px;height:80px;}
+.md-bonus .prev{right:50%;margin-right:110px;background:url(../../images/event/newyear2016/left.png) no-repeat center center/25px auto;}
+.md-bonus .next{left:50%;margin-left:110px;background:url(../../images/event/newyear2016/right.png) no-repeat center center/25px auto;}
+
+.md-layer{display:none;}
+.md-layer .bd{position:relative;width:320px;height:176px;background:url(../../images/event/newyear2016/tipbg.png) no-repeat center/320px 176px;overflow:auto;background-color:#fff;margin-left:auto;margin-right:auto;border-radius:5px;color:#666;}
+.md-layer h2{color:#fff78c;font-size:22px;padding-left:45px;padding-top:20px;line-height:30px;font-weight:700;}
+.md-layer .tip{color:#fff78c;font-size:14px;padding-left:45px;line-height:20px;font-weight:700;}
+.md-layer .blessing{height:40px;}
+.md-layer .btn-go{display:inline-block;width:130px;line-height:40px;text-align:center;font-size:20px;background-color:#ff7610;color:#fff;margin:0 5px;border-radius:5px;}
+.md-layer .btn-go:hover{background-color:#ff8e3a;}
+.md-layer .btn-go.btn2{background-color:#8e0000;}
+.md-layer .btn-go.btn2:hover{background-color:#810000;}

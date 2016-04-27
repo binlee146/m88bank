@@ -1,0 +1,73 @@
+@charset "utf-8";
+.btn-cz{display:inline-block;line-height:28px;font-size:14px;padding:0 15px;borde-radius:3px;}
+.desc1{position:relative;font-size:16px;line-height:30px;padding:0 10px;}
+.desc1 .pos-r{position:absolute;right:10px;bottom:0;line-height:24px;}
+/*.m-project-circle*/
+.m-project-circle{position:relative;padding-top:10px;text-align:center;}
+.m-project-circle .bd{position:absolute;left:50%;top:0;margin-left:-120px;width:240px;height:170px;font-size:12px;color:#888;}
+.m-project-circle .title{padding-top:50px;font-size:16px;}
+.m-project-circle .rate{line-height:60px;font-size:18px;color:#ff7610;}
+.m-project-circle .rate em{font-size:30px;}
+.m-project-circle .term{position:absolute;left:65px;bottom:0;border:1px solid #ddd;line-height:30px;height:30px;width:110px;border-radius:50px;font-size:12px;}
+.m-project-circle .term em{font-size:14px;color:#333;padding-left:5px;}
+
+.m-project-circle .mn{padding:15px 0 10px;border-bottom:1px solid #ebebeb;}
+.m-project-circle .mn li{position:relative;float:left;width:49%;height:40px;}
+.m-project-circle .mn .money{line-height:20px;font-size:14px;text-align:center;color:#333;}
+.m-project-circle .mn .desc{line-height:20px;font-size:12px;color:#999;}
+.m-project-circle .mn .bidstatus{position:absolute;right:0;bottom:-10px;width:100%;}
+.m-project-circle .extra{position:absolute;right:0;top:0;} 
+.m-project-circle .extra img{height:50px;}
+
+.m-project-circle.zqzr .bd{position:relative;height:auto;}
+.m-project-circle.zqzr .title{position:relative;padding-top:10px;line-height:20px;}
+.m-project-circle.zqzr .title .other{display:inline-block;position:relative;width:1px;line-height:20px;height:20px;}
+.m-project-circle.zqzr .title .u-label{position:absolute;left:4px;bottom:-4px;display:inline-block;white-space:nowrap;padding:4px 5px;line-height:1;}
+.m-project-circle.zqzr .rate{line-height:35px;padding-top:10px}
+.m-project-circle.zqzr .mn li{width:37%;}
+.m-project-circle.zqzr .mn li.w25{width:25%;}
+/*.m-project-desc*/
+.m-project-desc .hd{color:#333;font-size:16px;line-height:26px;}
+.m-project-desc .bd{padding-top:5px;}
+.m-project-desc .bd p{color:#888;line-height:20px;font-size:13px;}
+/*.m-project-form*/
+.m-project-form .mn li{position:relative;float:left;width:49%;height:55px;text-align:center;}
+.m-project-form .money{line-height:20px;font-size:14px;color:#999;padding-bottom:5px;}
+.m-project-form .money em{color:#333;}
+.m-project-form .linetz .input-text{width:65%;}
+.m-project-form .linetz .btn{position:absolute;right:0;top:0;width:32%;}
+/*.m-project-confirm*/
+.m-poject-confirm .tiphd{text-align:center;color:#333;font-size:14px;line-height:40px;}
+.m-poject-confirm .itemlist{padding:5px 0;}
+.m-poject-confirm .itemlist li{float:left;width:50%;text-align:center;line-height:40px;font-size:14px;color:#333;}
+/*.table*/
+.table-project th,.table-project td{line-height:34px;padding:0 4px;text-align:center;}
+.table-project th{background-color:#f1f6fb;color:#333;font-weight:400;text-align:center;border-top:1px solid #e2eaf2;border-bottom:1px solid #e2eaf2;font-size:13px;}
+.table-project td{color:#999;border-bottom:1px solid #ebebeb;font-size:12px;}
+.table-project .title{text-align:left;padding-left:10px;}
+
+.table-jkxx{margin-left:5px;}
+.table-jkxx td{font-size:12px;color:#888;line-height:34px;padding:0 4px;}
+/*.securitylist*/
+.securitylist li{margin-top:5px;background:url(../../images/bid/security_dot.png) no-repeat 2px 10px;line-height:20px;padding-left:15px;font-size:14px;color:#888;}
+
+.m-voucher{position:fixed;left:5%;top:50%;width:90%;z-index:1999;background-color:#fff;border-radius:4px;}
+.m-voucher-close{position:absolute;display:block;top:-10px;right:-10px;text-align:center;color:#bdbdbd;font-size:28px;width:36px;line-height:36px;height:36px;border-radius:40px;background-color:#fff;z-index:2999;}
+.m-voucher .m-voucher-list{display:block;width:100%;padding:0 0;overflow:auto;max-height:90%;z-index:1999;}
+.m-voucher .m-voucher-list li{display:block;padding:0 12px;font-size:12px}
+.m-voucher .m-voucher-list li.on,.m-voucher .m-voucher-list li:hover{background-color:#ffede0}
+.m-voucher p{line-height:20px;font-size:12px}
+.m-voucher em{color:#f80;font-weight:700;font-style:normal;}
+.m-voucher .link{position:relative;display:block;color:#333;padding:5px 0;border-top:1px solid #e5e0dc;padding-left:40px;}
+.m-voucher .link.first{border-top:none;padding-left:10px;padding-right:10px;text-align:center;}
+.m-voucher .checkboxdiv{position:absolute;left:0;top:50%;margin-top:-16px;z-index:10010;}
+.m-voucher .u-checkbox-orange2{position:relative;}
+.m-voucher .icheck_flat2{position:absolute;opacity:0;}
+.m-voucher .gray{color:#777}
+.m-voucher .scroll_container {overflow: hidden;position: relative;}
+.m-voucher .scroll_absolute {position: absolute;}
+.m-voucher .scroll_vertical_bar {position:absolute;top:0;right:5px;width:8px;height:100%;background:#fef6d7;margin: 0;padding: 0;}
+.m-voucher .scroll_track {position: relative;}
+.m-voucher .scroll_drag {position: relative;top:0;left: 0;cursor: pointer;background-color: #ffdfc7;border-radius:4px}
+.m-voucher .scroll_arrow {text-indent: -20000px;display: block;cursor: pointer;background-color: #D6B74B;}
+.m-voucher .scroll_vertical_bar .scroll_arrow { height: 16px;}

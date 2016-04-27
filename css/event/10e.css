@@ -1,0 +1,31 @@
+@charset "utf-8"; 
+.btn-go,.btn-go:hover{display:inline-block;text-align:center;width:24.04rem;height:4.67rem;line-height:4.67rem;padding-bottom:0.48rem;background:url(../../act/images/10e/btn1.png) no-repeat bottom center/24.04rem 5.15rem;font-size:1.9rem;color:#b51c1c;font-weight:700;}
+.btn-rule,.btn-rule:hover{display:inline-block;line-height:2.9rem;height:2.9rem;font-size:1.5rem;padding:0 2rem;border:2px solid #f0bbbb;color:#f0bbbb;border-radius:3rem;}
+.btn-answer,.btn-answer:hover{display:inline-block;line-height:4.8rem;height:4.8rem;font-size:1.8rem;width:24.04rem;background-color:#c33125;border:4px solid #b51c1c;color:#ffde03;border-radius:5rem;}
+.godown{display:inline-block;width:3.89rem;height:3.9rem;background:url(../../act/images/10e/icondown.png) no-repeat;background-size:3.89rem 3.9rem;}
+.sharepic{position:fixed;right:0;top:2rem;z-index:10001;text-align:center;width:100%;}
+.sharepic img{width:35.67rem;}
+
+.mainerbg{background:#d44237 url(../../act/images/10e/banner1.jpg) no-repeat center 0/100% auto;}
+.md-mainer{position:relative;padding-top:16.1rem;padding-bottom:3rem;}
+.totaltrade{position:relative;text-align:center;margin-left:auto;margin-right:auto;width:25.909rem;padding-left:3.35rem;height:4.852rem;background:url(../../act/images/10e/total.png) no-repeat center 0/29.259rem 4.852rem;}
+.totaltrade em{display:inline-block;text-align:center;font-size:3.37rem;color:#fff;line-height:4.6rem;width:3.852rem;padding:0;}
+.md-mode1 .desc{color:#fff;font-size:1.8rem;line-height:2.5rem;}
+.md-mode1 .desc em{color:#ffde03;font-size:2.1rem;}
+
+.md-mode2{background-color:#fff;width:90%;margin:3rem auto 0;}
+.md-layer{display:none;}
+
+/*上下晃动*/
+.annext{
+	-webkit-animation:arrow .8s ease 0.1s infinite alternate;
+	-moz-animation:arrow .8s ease 0.1s infinite alternate;
+	-ms-animation:arrow .8s ease 0.1s infinite alternate;
+	-o-animation:arrow .8s ease 0.1s infinite alternate;
+	animation:arrow .8s ease 0.1s infinite alternate
+}
+@-webkit-keyframes arrow{0%{-webkit-transform:translateY(0px)}100%{-webkit-transform:translateY(1rem)}}
+@-moz-keyframes arrow{0%{-moz-transform:translateY(0px)}100%{-moz-transform:translateY(1rem)}}
+@-ms-keyframes arrow{0%{-ms-transform:translateY(0px)}100%{-ms-transform:translateY(1rem)}}
+@-o-keyframes arrow{0%{-o-transform:translateY(0px)}100%{-o-transform:translateY(1rem)}}
+@keyframes arrow{0%{transform:translateY(0px)}100%{transform:translateY(1rem)}}

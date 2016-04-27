@@ -1,0 +1,51 @@
+@charset "utf-8";
+/*1活期转入页 zr.html*/
+/*总览圈*/
+.hq-total{position:relative;width:180px;height:180px;border:10px #eff2f4 solid;border-radius:200px;background-color:#54abfc;margin-left:auto;margin-right:auto;text-align:center;color:#fff;}
+.hq-total .bd{border-bottom:1px solid #4b9ae2;height:110px;margin:0 30px;}
+.hq-total .ft{border-top:1px solid #76bcfd;padding-top:5px;margin:0 30px;font-size:14px;}
+.hq-total .title{padding-top:30px;line-height:20px;font-size:14px;}
+.hq-total .rate{padding-top:10px;line-height:1;font-size:16px;}
+.hq-total .number{font-size:40px;}
+.hq-total .desc{color:#b7d8fe;}
+/*活期宝介绍表格*/
+.hq-table td{padding:0 5px;padding-left:8px;font-size:14px;}
+.hq-table .br1{border-right:1px solid #ddd;}
+.hq-table .desc{font-size:12px;color:#999;}
+.hq-table .iconfont{font-size:14px;color:#9bcfff;margin-right:3px;}
+/*更多详情*/
+.hq-moreinfo .bd .item{border-radius:0 0 4px 4px;padding:15px;}
+.hq-moreinfo .item p{font-size:14px;line-height:20px;color:#777;}
+.hq-moreinfo .item .title1{font-size:16px;color:#f80;line-height:30px;}
+.hq-moreinfo .table1 td{font-size:12px;color:#777;line-height:20px;padding:5px;}
+.hq-moreinfo .safelist li{position:relative;padding-left:40px;}
+.hq-moreinfo .safelist h2{font-size:16px;color:#f80;line-height:20px;}
+.hq-moreinfo .safelist p{font-size:12px;color:#888;line-height:20px;margin-bottom:10px;}
+.hq-moreinfo .safelist .pic{position:absolute;top:0;left:0;}
+.hq-moreinfo .safelist .pic img{width:35px;}
+/** 活期宝问题*/
+.hq-question dt{background-color:#f5f5f5;color:#f80;font-size:14px;border-bottom:2px solid #fdfdfd;padding-left:10px;line-height:40px;}
+.hq-question dd{display:none;line-height:30px;padding:10px;background-color:#fdfdfd}
+.hq-question dd p{line-height:30px;font-size:14px;color:#666;}
+/*2 活期总览页 hqmain.html*/
+.hq-summary{}
+.hq-summary .hd{background-color:#54abfc;color:#aad5fe;padding:30px 10%;font-size:14px;line-height:20px;text-align:center;}
+.hq-summary .total1{color:#fff;font-size:16px;line-height:40px;padding:5px 0;}
+.hq-summary .bd{background-color:#4e9aec;padding:15px 10%;}
+.hq-summary .bd td{padding:0;line-height:20px;color:#aad5fe;font-size:12px;}
+.hq-summary .bd td.border1{border:none;border-left:1px solid #aad5fe;padding-left:30px;}
+.hq-summary .bd .number{font-size:16px;color:#fff;}
+
+.hq-menulist{}
+.hq-menulist li{display:block;line-height:50px;font-size:14px;border-bottom:1px solid #ddd;}
+.hq-menulist li>a{position:relative;display:block;color:#888;padding:0 10%;overflow:hidden;}
+.hq-menulist li em{float:left;}
+.hq-menulist .icon1{float:left;display:inline-block;padding-right:5px;font-size:20px;color:#9bcfff;}
+.hq-menulist .icon2{float:right;display:inline-block;color:#ddd;}
+
+.hq-mainbtns{position:fixed;left:0;bottom:60px;z-index:101;width:100%;}
+.hq-mainbtns li{float:left;width:50%;text-align:center;} 
+.hq-mainbtns li .btn{border-radius:0;border:none;font-size:18px; height:50px;line-height:50px;}
+.hq-mainbtns li .border1{border-right:1px solid #fff;}
+
+

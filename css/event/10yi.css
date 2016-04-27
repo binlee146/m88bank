@@ -1,0 +1,37 @@
+@charset "utf-8"; 
+.mainerbg{background:url(../images/10e/10ebg.jpg?v=2) no-repeat top center/100% auto;}
+.md-10e{position:relative;padding:16.926rem 0 5rem;height:24.556rem;}
+.md-10e .bd{position:absolute;right:5.1%;top:16.926rem;width:70.46%;height:24.556rem;}
+.mt-60{ma3.75rem}
+
+::-webkit-input-placeholder {color:#a7bff2;font-size:1.5rem;}/* WebKit browsers */
+:-moz-placeholder {color:#a7bff2;font-size:1.5rem;}/* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {color:#a7bff2;font-size:1.5rem;}/* Mozilla Firefox 19+ */
+:-ms-input-placeholder {color:#a7bff2;font-size:1.5rem;}/* Internet Explorer 10+ */
+:-o-input-placeholder {color:#a7bff2;font-size:1.5rem;}
+.md-form{padding:1rem 3%;width:94%;}
+.md-form .formline2{position:relative;padding-top:1rem;line-height:4.3rem;}
+.md-form .formline2.pt0{padding-top:0;}
+.md-form .formline2 .input-text{border-color:#a7bff2;background:none;padding-left:5rem;border-width:0;border-bottom-width:1px;border-radius:0;color:#fff;font-size:2.25rem;}
+.md-form .formline2 .input-text.focus{box-shadow:none;border-color:#ff7610}
+.md-form .formline2 .tticon{position:absolute;left:0.5rem;bottom:0;display:inline-block;font-size:3rem;color:#a7bff2;}
+.md-form .formline2.focus .input-text{border-color:#fff;}
+.md-form .formline2.focus .tticon{color:#fff;}
+.md-form .formline2 .btn-code{position:absolute;width:10rem;top:1rem;right:0;border:1px solid #fff;border-radius:0.3rem;color:#fff;background:none;}
+.md-form .formline2 .btn-code:hover{background:none;}
+.md-form .formline2 .btn-code.disabled{background:none;color:#a7bff2;border-color:#a7bff2}
+.md-form .formline2 .pr-code{padding-right:12rem}
+.md-form .formline2 .pr1{padding-right:4rem}
+.md-form .formline2 .codepic{position:absolute;right:0;bottom:0.85rem;width:10rem;height:3.6rem}
+.md-form .errortip{display:block;padding-left:1.75rem;color:#f00;background:url(../../images/icon-error.png) no-repeat left center;background-size:1.625rem 1.625rem}
+
+.md-layer{display:none;}
+.md-layer .bd{position:relative;width:90%;max-height:90%;overflow:auto;background-color:#fff;margin-left:auto;margin-right:auto;border-radius:0.5rem;}
+.md-layer .tip1{font-size:2.7rem;text-align:center;line-height:3.6rem;}
+.md-layer .tip2{font-size:1.5rem;text-align:center;line-height:2rem;padding-top:2px;}
+.md-layer .closebtn{position:absolute;display:block;right:0.8rem;top:0.8rem;cursor:pointer;z-index:1000;}
+.md-layer .closebtn img{width:2.3rem;height:auto;}
+
+
+
+

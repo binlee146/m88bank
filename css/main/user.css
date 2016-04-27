@@ -1,0 +1,68 @@
+@charset "utf-8";
+.mu-user{position:relative;}
+/*mu-account-total*/
+.mu-account-total{position:relative;background-color:#54abfc;text-align:center;padding:20px 10px;}
+.mu-account-total .hd{color:#9ecffe;font-size:14px;line-height:20px;}
+.mu-account-total .amount{color:#fff;font-size:16px;line-height:40px;}
+.mu-account-total .amount em{font-size:32px;}
+.mu-account-total .userset{position:absolute;right:10px;top:10px;}
+.mu-account-total .userset .iconfont{color:#aad5fe;font-size:36px;display:inline-block;line-height:1;}
+/*mu-account-detail*/
+.mu-account-detail{background-color:#fff;}
+.mu-account-detail .bd{padding:15px 0;}
+.mu-account-detail li{position:relative;float:left;width:50%;height:65px;text-align:center;}
+.mu-account-detail .br1{border-right:1px dashed #bbb;}
+.mu-account-detail .desc{line-height:20px;font-size:14px;color:#999;padding-top:5px;}
+.mu-account-detail .price{line-height:40px;font-size:14px;color:#333;}
+.mu-account-detail .price em{font-size:20px;margin-right:5px;}
+.mu-account-detail .ft{text-align:center;padding:0 0 15px;}
+.mu-account-detail .btn{width:40%;margin:0 5px;}
+/*mu-account-menu*/
+.mu-account-menu{background-color:#fff;}
+.mu-account-menu li{float:left;width:33.33%;text-align:center;}
+.mu-account-menu .item{position:relative;display:block;border-right:1px solid #ebebeb;border-bottom:1px solid #ebebeb;padding:15px 0;}
+.mu-account-menu  li:nth-child(3n) .item{border-right:none;}
+.mu-account-menu .iconfont{display:inline-block;line-height:40px;color:#54abfc;font-size:32px;}
+.mu-account-menu h2{font-size:14px;color:#444;}
+.mu-account-menu .dottip{position:absolute;display:block;left:50%;margin-left:3px;top:15px;width:10px;height:10px;background-color:#f00;border:3px solid #fff;border-radius:20px;}
+/*mu-account-list*/
+.mu-account-list{position:relative;background-color:#fff;}
+.mu-account-list li{border-bottom:1px solid #ebebeb;}
+.mu-account-list .item{position:relative;display:block;line-height:50px;padding-left:20px;font-size:13px;overflow:hidden;}
+.mu-account-list .item p{float:left;color:#444;font-size:14px;}
+.mu-account-list .item .icon1{float:left;display:inline-block;line-height:50px;color:#54abfc;font-size:30px;margin-right:3px;}
+.mu-account-list .item .icon2{position:absolute;right:15px;top:0;font-size:14px;color:#aaa;margin-right:3px;}
+.mu-account-list .item .pos-r{position:absolute;right:20px;top:0;line-height:50px;}
+.mu-account-list .item .remark{position:absolute;right:35px;top:0;font-size:13px;}
+/**.mu-account-remind 小e语录*/
+.mu-account-remind{text-align:center;font-size:12px;color:#666;line-height:30px;}
+.mu-account-remind .iconfont{padding-right:3px;color:#ff7610;font-size:16px;}
+/**.mu-safetip 安全提醒*/
+.mu-safetip{position:relative;background-color:#fdf3db;border-top:1px solid #eae2d9;border-bottom:1px solid #eae2d9;padding:5px 15px;padding-left:40px;}
+.mu-safetip .desc{display:block;line-height:20px;color:#f89c45;font-size:12px;}
+.mu-safetip .iconfont{position:absolute;left:15px;top:5px;font-size:20px;}
+.mu-safetip .link{padding:0 20px;color:#2261f0;}
+.mu-safetip .close{position:absolute;display:block;right:5px;top:0;line-height:30px;color:#f80;font-size:22px;width:30px;text-align:center;cursor:pointer;}
+/*.m-taste*/
+.m-taste{position:relative;margin:0 10px;background-color:#fff}
+.m-taste-hd{position:relative;background-color:#ffa282;padding:15px 30px;}
+.m-taste-hd h2{font-size:20px;color:#fff;line-height:30px;font-weight:400;}
+.m-taste-hd h6{font-size:12px;color:#c15733;line-height:14px;font-weight:400;}
+.m-taste-hd .btn-go{position:absolute;top:50%;right:30px;margin-top:-20px;line-height:40px;height:40px;padding:0 20px;background-color:#eb7248;font-size:16px;color:#fff;font-weight:700;border-radius:4px}
+.m-taste h1{font-size:16px;font-weight:400;line-height:1;padding-left:0.5rem;margin:20px 15px 15px;border-left:4px solid #f80;}
+.m-taste-bd{}
+.m-taste-bd .table th{font-size:14px;color:#333;font-weight:400}
+.m-taste-bd .table td{border-top:1px solid #ddd;line-height:40px;padding:0;font-size:12px;color:#737373}
+/*.m-voucher*/
+.m-voucher{padding:0 10px}
+.m-voucher .voucher{position:relative;display:block !important;background:url(../../images/user/bred.png) no-repeat center/100% 110px;height:110px;padding-left:30px;color:#c15733;margin-bottom:10px}
+.m-voucher .voucher h2{font-size:14px;line-height:20px;padding-top:10px}
+.m-voucher .voucher p{font-size:12px;line-height:20px;}
+.m-voucher .voucher .number1{color:#fff;font-size:18px;line-height:32px;height:32px;}
+.m-voucher .voucher .number1 em{font-size:24px}
+.m-voucher .voucher .other{position:absolute;top:15px;right:15px;width:170px;text-align:center}
+.m-voucher .voucher .other p{color:#fff;overflow:hidden;line-height:1;font-size:12px;padding-top:5px;}
+.m-voucher .voucher .btn-go{display:inline-block;line-height:40px;height:40px;width:130px;background-color:#eb7248;font-size:16px;color:#fff;font-weight:700;border-radius:0.4rem;text-align:center;}
+.m-voucher .voucher .btn-go.btn-gray{background-color:#b0b0b0;}
+.m-voucher .voucher-gray{background:url(../../images/user/bgray.png) no-repeat center/100% 110px;color:#7e7e7e;}
+.m-voucher .voucher-gray .btn-go{background-color:#858585;}

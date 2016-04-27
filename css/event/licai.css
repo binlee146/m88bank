@@ -1,0 +1,37 @@
+@charset "utf-8";
+.m-licai{position:relative;background:#483c80 url(../../act/images/licai/banner.jpg?v=2) no-repeat top center/100% auto;}
+.hd1{height:22.5rem;}
+.btn-yellow{display:inline-block;text-align:center;width:27.407rem;background:url(../../act/images/licai/btn1.png?v=2) no-repeat bottom center/27.407rem 4.5rem;height:4.5rem;line-height:4.5rem;font-size:1.8rem;color:#fff}
+.btn-yellow:hover,.btn-yellow:active{background:url(../../act/images/licai/btn1.png?v=2) no-repeat bottom center/27.407rem 4.5rem;}
+.btn1{display:inline-block;width:12.63rem;height:3.815rem;line-height:3.815rem;background:url(../../act/images/licai/bg2.png) no-repeat center/12.63rem 3.815rem;text-align:center;color:#f1d83d;font-size:1.4rem;}
+
+.m-mode1{background:url(../../act/images/licai/bg1.png) repeat 0;border-radius:0.5rem;width:27.407rem;margin:0 auto;padding:1rem 0;}
+.m-mode1 .table em{color:#fee42e;padding:0 0.4rem;font-size:2.5rem;}
+.m-mode1 .table td{line-height:4rem;padding:0;color:#fff;font-size:1.35rem;}
+.m-mode1 .table p{line-height:3rem;padding-bottom:0.5rem;}
+.m-mode1 .iconfont{font-size:1.8rem;padding-right:0.4rem;}
+
+.m-mode2{text-align:center;padding-top:1rem;}
+.m-mode2 .mt2{margin-top:2rem}
+.m-mode2 .input-text{color:#df1f2d;text-align:center;width:27.407rem;line-height:4.35rem;height:4.35rem;font-size:1.78rem;background-color:#fff;color:#806b00;border-radius:0.3rem;box-shadow:0 0px 3px 2px #ddd inset;}
+
+.m-mode3{margin-top:3rem;padding-bottom:2rem;}
+.m-mode4{position:absolute;right:0;top:2.5rem;}
+
+.md-prize{display:none;}
+.md-form{position:relative;padding:3rem 2.5rem;border-radius:0.5rem}
+.md-form .formitem{position:relative;}
+.md-form .formitem .input-title{line-height:2.6rem;height:2.6rem;position:absolute;left:0;top:0.8rem;padding-top:1px;width:11rem;text-align:center;color:#a3a3a3;border-right:1px solid #a3a3a3;font-size:1.55rem;}
+.md-form .formitem .input-text{display:inline-block;width:27rem;padding:1rem 0.5rem;padding-left:11.5rem;line-height:4.2rem;height:4.2rem;text-align:center;border-radius:0.2rem;font-size:1.55rem;}
+.md-form .formitem .input-text.input-code{padding-right:6.2rem}
+.md-form .formitem .codepic{position:absolute;right:1px;top:1px;}
+.btn-submit{display:inline-block;width:27rem;background-color:#e13244;line-height:4.5rem;height:4.5rem;text-align:center;color:#fff;font-size:1.8rem;border-radius:3px;}
+.btn-submit:hover{box-shadow:0 0 2px 3px rgba(255,255,255,.5) inset;}
+.md-result{position:relative;padding:3rem 2.5rem;border-radius:0.5rem}
+.md-result p{position:relative;color:#a3a3a3;font-size:1.5rem;line-height:2.5rem;width:27rem}
+.md-result p .iconfont{display:inline-block;padding-right:5px;font-size:2.2rem;}
+.md-result em{color:#e13244;font-size:1.8rem;}
+.md-result .bold{font-size:1.8rem;color:#585858;}
+
+.md-form .closebtn,.md-result .closebtn{position:absolute;left:14rem;bottom:-6rem;display:inline-block;}
+.closebtn .iconfont{display:inline-block;line-height:3.2rem;width:3.2rem;color:#999;font-size:3rem;font-weight:400;}

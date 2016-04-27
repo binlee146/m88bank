@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>修改邮箱 - e路同心手机官网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta charset="UTF-8">
+<meta name="author" content="e路同心,88bank.com，深圳市同心科创金融服务有限公司" />
+<meta name="keywords" content="e路同心，P2P理财平台，高收益，安全有保障，互联网金融">
+<meta name="description" content="e路同心是总部位于深圳的一家国资背景互联网金融P2P理财平台，致力于为中小企业和个人投资者提供投融资信息中介服务。平台与优质小贷公司紧密合作，通过安全稳定的互联网平台实现跨区域资源配置的匹配与撮合，致力于为中小企业提供融资新渠道，并为个人提供创新型投资理财服务。">
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="Bookmark" href="../../favicon.ico">
+<link rel="Shortcut Icon" href="../../favicon.ico" />
+<link rel="stylesheet" type="text/css" href="../../css/main/global.css?v=20160318"/>
+<link rel="stylesheet" type="text/css" href="../../css/main/public.css?v=20160322"/>
+<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css?v=20160311" />
+<script type="text/javascript">
+	var basePath = '../..';
+</script>
+</head> 
+<body>
+<div class="m-page pb-60 wp bgf4">
+    <header class="g-header">
+    	<div class="baseh"></div>
+    </header>
+    <div class="g-mainer bgfff mgbase radius">
+    	<div class="m-mainer">
+    		<div id="step1">
+			 <div class="text-c f-14 c-999  pt-20 pl-20 pr-20">绑定的邮箱:<span class="f-16 c-333">7****@qq.com</span></div>
+             <form class="m-form pt-20 pb-30 mgbase20" id="form1">
+             	<div class="formline formline2">
+                     <i class="iconfont tticon">&#xe600;</i>
+                     <input type="text" id="verifyCode" name="verifyCode" class="input-text size-L pr-code" placeholder="请输入邮箱验证码" maxlength="6" onblur="checkVerifyCode()" autocomplete="off">
+                     <button type="button" class="btn btn-code size-L" id="getVerifyCode">获取验证码</button>
+                 </div>
+                 <div class="text-c f-12 c-999 l20 pd-10">为保障您的账户信息安全，系统会发送验证码至您的原邮箱，请您正确填写，以确认您的身份信息。</div>
+                 <div id="info1" class="text-r mt-10 f-14"></div>
+                 <!-- 语音 -->
+                 <div class="ft w84 mt-10">
+                     <p id="error1" class="pb-10 f-14"></p><!-- 错误提示 -->
+                     <div class="formline">
+                         <button type="button" id="submit1" class="btn btn-orange size-XL btn-block" onclick="onSubmit1()">下一步</button>
+                     </div>
+                 </div>
+             </form>
+             </div>
+             <div id="step2" style="display:none;">
+	             <form class="m-form pt-20 pb-30 mgbase20" id="form1">
+	             	<div class="formline formline2">
+	                     <i class="iconfont tticon">&#xe600;</i>
+	                     <input type="text" id="newEmail" name="newEmail" class="input-text size-L pr-code" placeholder="请输入您的新邮箱" onblur="checkNewEmail()" autocomplete="off">
+	                 </div>
+	                 <div class="formline formline2">
+	                     <i class="iconfont tticon">&#xe600;</i>
+	                     <input type="text" id="verifyCode2" name="verifyCode2" class="input-text size-L pr-code" placeholder="请新输入邮箱验证码" maxlength="6" onblur="checkVerifyCode2()" autocomplete="off">
+	                     <button type="button" class="btn btn-code size-L" id="getVerifyCode2">获取验证码</button>
+	                 </div>
+	                 <div class="text-c f-12 c-999 l20 pd-10">点击获取，系统将发送验证码到您的新邮箱。</div>
+	                 <div id="info2" class="text-r mt-10 f-14"></div>
+	                 <!-- 语音 -->
+	                 <div class="ft w84 mt-10">
+	                     <p id="error2" class="pb-10 f-14"></p><!-- 错误提示 -->
+	                     <div class="formline">
+	                         <button type="button" id="submit2" class="btn btn-orange size-XL btn-block" onclick="onSubmit2()">提交</button>
+	                     </div>
+	                 </div>
+	             </form>
+             </div>
+        </div>
+    </div>
+     <div class="g-extra baseh bgf4"></div>
+<footer class="g-footer">
+	<div class="m-footer clearfix">
+	     <a href="../index.html" id="nav_home"><i class="iconfont">&#xe619;</i><h2>首页</h2></a>
+	     <a href="../invest/invest_list.html" id="nav_tz"><i class="iconfont">&#xe618;</i><h2>投资</h2></a>
+	     <a href="../login.html" id="nav_user"><i class="iconfont">&#xe61a;</i><h2>账户</h2></a>
+	     <a href="../help/security.html" id="nav_help"><i class="iconfont">&#xe61b;</i><h2>帮助</h2></a>
+	</div>
+</footer>
+</div>
+<script type="text/javascript" src="../../lib/jquery.min.js?v=20160120"></script>
+<script type="text/javascript" src="../../lib/layer/layer.m.js?v=20160120"></script>
+<script type="text/javascript" src="../../js/public.js?v=20160120"></script><script type="text/javascript">
+$(function(){
+    $("#nav_user").addClass("on");
+    $('#getVerifyCode').on('click',function(){
+		getVerifyCode();
+	});
+    $('#getVerifyCode2').on('click',function(){
+		getVerifyCode2();
+	});
+});
+//1.1 邮箱验证码
+function checkVerifyCode() {
+    var _input = $("#verifyCode");
+    var _val = _input.val();
+    var _tips = $("#error1");
+    var verifyCodeReg = /^[0-9]{6}$/;
+    _tips.html('');
+    if (_val == "") {
+    	_input.addClass("Validform_error");
+        _tips.html('<span class="errortip">短信验证码不能为空</span>');
+        return false;
+    } else if (!verifyCodeReg.test(_val)) {
+    	_input.addClass("Validform_error");
+        _tips.html('<span class="errortip">您输入6位有效验证码</span>');
+        return false;
+    }
+    return true;
+}
+function getVerifyCode(){
+	var _tips = $("#error1");
+	// 按钮不可用
+	$("#getVerifyCode").addClass("disabled").attr("disabled", true);
+	$.ajax({
+		type : "post",
+		dataType : "json",
+		url : basePath + "/verify-code/email/getcode-user",
+		data : {"type":"xgyx_code"},
+		success : function(data) {
+			var result = $.parseJSON(data);
+			if(result.success != undefined && result.success){
+				disableButtonByClock(60,"getVerifyCode");
+				_tips.html('<span class="warningtip">验证码已发送至您的邮箱，请查收。</span>');
+			}else{
+				$("#getVerifyCode").removeClass("disabled").attr("disabled", false).html("获取验证码");
+				_tips.html('<span class="errortip">'+ result.msg + '</span>');
+			}
+		}
+	});
+}
+//禁用发送邮件验证码按钮
+function disableButtonByClock(seconds,id) {
+    $("#"+id).addClass("disabled").attr("disabled", true).html(seconds + "s重发");
+    var time = parseInt(seconds);                   //将传入的参数转为整型数字
+    if (time === 0) {
+        $("#"+id).removeClass("disabled").attr("disabled", false).html("获取验证码");
+    } else {
+        setTimeout("disableButtonByClock(" + (time - 1) + ",'"+id+"')", 1000);  //1秒以后 再次调用本身这个方法
+    }
+}
+//1.2下一步
+function onSubmit1() {
+    if (checkVerifyCode()) {
+       //验证....
+        $.ajax({
+		     url: "../../accountmgr/email/updemail/unbind",
+		     type: 'POST',
+		     data: {"code":$("#verifyCode").val()},
+		     dataType: 'json',
+		     cache: false,
+		     async: true,
+		     success: function (data) {
+		         var result = $.parseJSON(data);
+		         if (result.success) {
+		           $("#step1").hide();
+		           $("#step2").show();
+		         } else {
+		       	  $("#error1").html('<span class="errortip">'+result.msg+'</span>').show();
+		         }
+		     }
+		 });
+    }
+}
+//2.1 新邮箱
+function checkNewEmail(){
+	 var _input = $("#newEmail");
+	    var _val = _input.val();
+	    var _tips = $("#error2");
+	    var verifyCodeReg = /^[0-9]{6}$/;
+	    _tips.html('');
+	    if (_val == "") {
+	    	_input.addClass("Validform_error");
+	        _tips.html('<span class="errortip">邮箱不能为空</span>');
+	        return false;
+	    } else if (!isEmail(_val)) {
+	    	_input.addClass("Validform_error");
+	        _tips.html('<span class="errortip">请输入正确的邮箱</span>');
+	        return false;
+	    }
+	    return true;
+}
+function getVerifyCode2(){
+	var _tips = $("#error2");
+	if(!checkNewEmail())return;
+	// 按钮不可用
+	$("#getVerifyCode2").addClass("disabled").attr("disabled", true);
+	$.ajax({
+		type : "post",
+		dataType : "json",
+		url : basePath + "/verify-code/email/getcode",
+		data : {"type":"bdyx_code","email":$("#newEmail").val()},
+		success : function(data) {
+			var result = $.parseJSON(data);
+			if(result.success != undefined && result.success){
+				disableButtonByClock(60,"getVerifyCode2");
+				_tips.html('<span class="warningtip">验证码已发送至' + $("#newEmail").val() + '，请查收。</span>');
+			}else{
+				$("#getVerifyCode2").removeClass("disabled").attr("disabled", false).html("获取验证码");
+				_tips.html('<span class="errortip">'+ result.msg + '</span>');
+			}
+		}
+	});
+}
+//2.2 新邮箱验证码
+function checkVerifyCode2() {
+   var _input = $("#verifyCode2");
+   var _val = _input.val();
+   var _tips = $("#error2");
+   var verifyCodeReg = /^[0-9]{6}$/;
+   _tips.html('');
+   if (_val == "") {
+   	_input.addClass("Validform_error");
+       _tips.html('<span class="errortip">邮箱验证码不能为空</span>');
+       return false;
+   } else if (!verifyCodeReg.test(_val)) {
+   	_input.addClass("Validform_error");
+       _tips.html('<span class="errortip">您输入6位有效验证码</span>');
+       return false;
+   }
+   return true;
+}
+//2.3修改邮箱
+function onSubmit2() {
+    if (checkNewEmail()&&checkVerifyCode2()) {
+    	$.ajax({
+            url: "../../accountmgr/email/updemail/bind",
+            type: 'POST',
+            data: {"verifyCode":$("#verifyCode2").val(),"email":$("#newEmail").val()},
+            dataType: 'json',
+            cache: false,
+            async: true,
+            success: function (data) {
+                var result = $.parseJSON(data);
+                if (result.success) {
+                	successTip();
+                } else {
+                	 $("#error2").html('<span class="errortip">'+result.msg+'</span>').show();
+                }
+            }
+        });
+    }
+}
+//邮箱验证
+function isEmail(str){
+     var bValidate = RegExp(/^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/).test(str);  
+       if (bValidate) {  
+         $("#error2").html('');
+         return true;  
+       }else  {
+         return false;  
+       }
+}
+//投资成功提示
+function successTip(){
+	layer.open({
+	    content: '<i class="iconfont mr-5" style="font-size:20px">&#xe60f;</i>修改成功',
+	    shadeClose:false,
+	    style: 'background-color:#fff;color:#ff7610; border:none;font-size:16px',
+	    success: function(elem){
+	        setTimeout(function(){
+	        	window.location="../user/account_view.html";
+	        },1000); 
+	    }  
+	});
+}
+</script>
+</body>
+</html>

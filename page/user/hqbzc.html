@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>同心活期-转出 - e路同心手机官网</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta charset="UTF-8">
+<meta name="author" content="e路同心,88bank.com，深圳市同心科创金融服务有限公司" />
+<meta name="keywords" content="e路同心，P2P理财平台，高收益，安全有保障，互联网金融">
+<meta name="description" content="e路同心是总部位于深圳的一家国资背景互联网金融P2P理财平台，致力于为中小企业和个人投资者提供投融资信息中介服务。平台与优质小贷公司紧密合作，通过安全稳定的互联网平台实现跨区域资源配置的匹配与撮合，致力于为中小企业提供融资新渠道，并为个人提供创新型投资理财服务。">
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="Bookmark" href="../../favicon.ico">
+<link rel="Shortcut Icon" href="../../favicon.ico" />
+<link rel="stylesheet" type="text/css" href="../../css/main/global.css?v=20160318"/>
+<link rel="stylesheet" type="text/css" href="../../css/main/public.css?v=20160322"/>
+<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css?v=20160311" />
+<script type="text/javascript">
+	var basePath = '../..';
+</script>
+    <link href="../../css/main/hqb.css?v=20160105" rel="stylesheet" type="text/css"/>
+</head> 
+<body>
+<!-- 顶部栏 -->
+<div class="m-page pb-70 bgf4 wp">
+	<header class="g-header">
+		<div class="baseh"></div>
+	</header>
+	 <div class="g-mainer bgfff mgbase radius">
+		<div class="pdbase25 pb-30">
+			<div  id="tip_zc" class="m-form pt-20 ">
+				<div class="formline">
+					<div class="content"><span class="mr-15">可转出额度</span><span class="orange f-18" id="freeAmt">
+						0.00 </span>元
+					</div>
+				</div>
+				<div class="formline">
+					<div class="content">
+						<span class="mr-15">项目可转出总额度</span>
+						<span class="orange f-18" id="outRemainAmt">2,573,500.00</span>元
+					</div>
+				</div>
+				<div class="formline">
+					<label class="input-title">转出金额</label>
+					<input type="text" id="money" name="money" class="input-text size-L" placeholder="请转出100的倍数" onblur="checkMoney()"  onkeyup="this.value=this.value.replace(/[^\d.]/g,'')"  autocomplete="off">
+					<div class="l30 f-14 tips" for="money"></div>
+				</div>
+				<div class="formline">
+					<label class="input-title">交易密码</label>
+					<input type="password" id="password" name="password" class="input-text size-L" placeholder="请输入平台交易密码" onblur="checkPassword()"  autocomplete="off">
+					<div class="l30 f-14 tips" for="password"></div>
+				</div>
+				<div class="formline text-r mt-10">
+					<a href="../../accountmgr/trapwd/back" class="orange f-14">忘记密码？</a>
+				</div>
+				<div class="f-14 c-666 l40">预计到账时间&nbsp;<span class="pl-20" id="expectedTime">
+					2016年03月25日
+				</span></div>
+				<div class="formline mt-5">
+					<button  id="btn_post" type="button" class="btn btn-orange btn-block size-XL" onclick="transferOut()">确认转出</button>
+				</div>
+			</div>
+		</div>
+		<div class="baseh bgf4"></div>
+		<div class="pdbase20 pt-20 pb-20">
+			<div class="m-wxtip">
+				<div class="hd">温馨提示</div>
+				<p class="tip mt-5">				
+				1、平台同心活期项目发布时确定当日可转出的最大额度，该额度由所有同心活期用户共享，当日所有同心活期用户转出的金额不得大于可转出额度。<br>
+				2、用户同心活期账户每日可转出的金额不超过其上一日的同心活期余额。<br>
+				3、转入后第二天可申请转出。当日17点之前申请转出，当日到帐；当日17点后申请转出，第二个工作日到帐。<br>
+				4、会员申请转出后，转出资金的收益结算截止到会员资金转出的前一日。<br>
+			</p>
+			</div>
+		</div>
+	</div>
+<footer class="g-footer">
+	<div class="m-footer clearfix">
+	     <a href="../index.html" id="nav_home"><i class="iconfont">&#xe619;</i><h2>首页</h2></a>
+	     <a href="../invest/invest_list.html" id="nav_tz"><i class="iconfont">&#xe618;</i><h2>投资</h2></a>
+	     <a href="../login.html" id="nav_user"><i class="iconfont">&#xe61a;</i><h2>账户</h2></a>
+	     <a href="../help/security.html" id="nav_help"><i class="iconfont">&#xe61b;</i><h2>帮助</h2></a>
+	</div>
+</footer>
+</div>
+	<div id="zcsuccess" style="display:none">
+    	<div class="text-c pd-30">
+              <div class="orange f-30"><i class="iconfont mr-5" style="font-size:2.4rem">&#xe60f;</i>转出申请提交成功</div>
+              <div class="f-20 mt-10">转出金额&nbsp;&nbsp;<span class="orange" id="out_amount"></span>元</div>
+              <div class="mt-5 f-18">预计到账时间&nbsp;&nbsp;<font id="out_date"></font></div>
+              <div class="c-999 mt-10 f-16">（转出金额将转至您的平台账户可用余额中）</div>
+              <div class="mt-10"><a href="../invest/current_info.html" class="btn btn-orange" style="width:70%;">关闭 </a></div>
+         </div>
+     </div>
+</body>
+<script type="text/javascript" src="../../lib/jquery.min.js?v=20160120"></script>
+<script type="text/javascript" src="../../lib/layer/layer.m.js?v=20160120"></script>
+<script type="text/javascript" src="../../js/public.js?v=20160120"></script>
+<script>
+var amount='';
+var today='';
+var freeAmt=0;
+var outLimitAmt =500000;
+var outRemainAmt =2573500;
+$(function(){
+	$("#nav_user").addClass("on");	
+});
+function checkMoney(){
+	var _input=$("#money");
+	 amount=_input.val();
+	var _tips=$(".tips[for=money]");
+	_tips.html('');
+	var numReg = /^[0-9]*[1-9][0-9]*$/;
+
+	if(amount==""||amount=="0"){
+		_tips.html('<span class="errortip">请输入转出金额</span>');
+		return false;
+	}else if (!numReg.test(amount)) {
+		_tips.html('<span class="errortip">请输入正确的数字</span>')
+		return false;
+	}else if(amount%100 != 0 ) {
+		_tips.html('<span class="errortip">必须100的整数倍</span>')
+		return false;
+	}else if(amount>freeAmt) {
+		_tips.html('<span class="errortip">转出金额不得超过可转出额度</span>')
+		return false;
+	}else if(amount>outRemainAmt) {
+		_tips.html('<span class="errortip">转出金额不得超过项目可转出总额度</span>')
+		return false;
+	}else if(amount>500000) {
+		_tips.html('<span class="errortip">单笔转出金额不得超过'+500000+'元</span>')
+		return false;
+	}
+    return true;
+}
+function checkPassword(){
+	var _input=$("#password");
+	var _val=_input.val();
+	var _tips=$(".tips[for=password]");
+	_tips.html('');
+	if(_val==""){
+		_tips.html('<span class="errortip">请输入平台交易密码</span>');
+		return false;
+	}
+	return true;
+}
+function transferOut(){
+	if(checkMoney()&&checkPassword()){		
+		var password=$("#password").val();
+		$('#btn_post').attr("disabled","true");
+		var option = {
+			url : "../../secure/current/out/ajax",
+			data : {
+				password : password,
+				amount : amount
+			},
+			type : 'POST',
+			dataType : 'json',
+			success : function (data) {
+				var result = $.parseJSON(data);
+				if(result.success) {
+					$('#out_amount').html(result.data[0].amount);
+					$('#out_date').html(result.data[0].ExpectedTime);
+					var _content = $("#zcsuccess").html();
+					layer.open({
+						type: 1,
+						title: false,
+						content: _content
+					});
+				} else {
+					layer.open({
+						style: 'border:none; background-color:#f90; color:#fff;font-size:1.5rem;line-height:2rem',
+						time: 3,
+						content: result.msg
+					});
+				}
+			}
+		}
+		$.ajax(option);
+	}
+}
+</script>
+</html>

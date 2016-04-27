@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>定期理财 - e路同心手机官网</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta charset="UTF-8">
+<meta name="author" content="e路同心,88bank.com，深圳市同心科创金融服务有限公司" />
+<meta name="keywords" content="e路同心，P2P理财平台，高收益，安全有保障，互联网金融">
+<meta name="description" content="e路同心是总部位于深圳的一家国资背景互联网金融P2P理财平台，致力于为中小企业和个人投资者提供投融资信息中介服务。平台与优质小贷公司紧密合作，通过安全稳定的互联网平台实现跨区域资源配置的匹配与撮合，致力于为中小企业提供融资新渠道，并为个人提供创新型投资理财服务。">
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="Bookmark" href="../../favicon.ico">
+<link rel="Shortcut Icon" href="../../favicon.ico" />
+<link rel="stylesheet" type="text/css" href="../../css/main/global.css?v=20160318"/>
+<link rel="stylesheet" type="text/css" href="../../css/main/public.css?v=20160322"/>
+<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css?v=20160311" />
+<script type="text/javascript">
+	var basePath = '../..';
+</script>
+	 <link href="../../css/main/project.css?v=04" rel="stylesheet" type="text/css"/>
+</head> 
+<body>
+<!-- 顶部栏 -->
+<div class="m-page wp pb-60">
+	<div class="g-mainer">
+		<div class="m-mainer">
+			<div class="m-project-circle">
+				<canvas  id="canvas"  class="canvas" ></canvas>
+				<div class="extra">
+				</div>
+				<div class="bd">
+					<div class="title">年化收益率</div>
+					<div class="rate"><em>10</em>%</div>
+					<div class="term">期限<em>3月</em></div>
+				</div>
+				<ul class="mn clearfix">
+					<li class="br1"><div class="money">1,000,000.00元</div>
+						  <div class="desc">募集金额</div>
+					</li>
+					<li>
+				  		  <div class="money">0.00元</div>
+						  <div class="desc">可投金额</div>
+					</li>
+				</ul>
+			</div>
+			<div class="baseh bgf4"></div>
+			<ul class="m-listview bt1">
+				<li><div class="item"><h2>项目名称</h2>
+					<p>贷e贷<span class="f-12 c-999">1601290064</span>
+						<span class="company"><img src="../../images/demo/org.png">同心再贷&nbsp;推荐</span>
+					</p></div></li>
+				<li><div class="item"><h2>还款方式</h2><p>每月付息,到期还本</p></div></li>
+			</ul>
+			<input type="hidden" name="loanId" id="loanId" value="bd0bf4adfd404a028012f9657e3e1a07">
+		  	<input type="hidden" name="voteInvestAmt" id="voteInvestAmt" value="0">
+		  	<input type="hidden" id="tasteInvestAmt" name="tasteInvestAmt" value="0" />
+		  	<input type="hidden" name="isVote" id="isVote" value="0">
+		  	<input type="hidden" name="repayMode" id="repayMode" value="3">
+		  	<input type="hidden" id="currentLoanPeriodUnit" value="1"/>
+		  	<input type="hidden" id="currentLoanPeriod" value="3"/>
+		  	<input type="hidden" id="currentRate" value="10"/>
+		  	<input type="hidden" id="isAct" value="0"/>
+		  	<input type="hidden"  value="" id="couponId" />		    			
+			<input type="hidden"  value="" id="couponAmt" />
+			<input type="hidden"  value="1" id="couponTotalNumber" />
+			<input type="hidden" name="availableAmt" id="availableAmtId" value="0">
+			<input type="hidden" name="mayInvestAmt" id="mayInvestAmtId" value="0">
+			<div class="m-project-form pt-15">
+					<ul class="mn clearfix pb-15">
+						<li class="br1"><div class="money">可用余额&nbsp;<em>0.00元</em></div>
+							  <div><a href="../user/recharge.html" class="btn btn-orange2 btn-cz">充值</a></div>
+						</li>
+						<li><div class="money" id="txtVoucherTotal">可用红包&nbsp;<em>1张</em></div>
+							  <div><a href="javascript:;" class="btn btn-orange2 btn-cz" onclick="openVoucher()" id="btnVoucher">选择</a></div>   
+						</li>
+					</ul>
+				<form action="" class="m-form w80">
+					<div class="formline mt-5 linetz">
+								<button type="button" id="btnJoin" class="btn btn-orange size-XL">立即投资</button>
+								<input type="text" id="investAmt"  name="investAmt" class="input-text size-XL text-c" 
+								onkeyup="value=value.replace(/\b(0+)/gi,'');value=value.replace(/[^\d]/gi,'');"
+									placeholder="最低投资金额100"
+								value="0">
+					</div>
+					<p id="error1" class="f-12"></p>
+					<p class="f-12">点击立即投资即代表您同意并签署<a href="../../agreement/bd0bf4adfd404a028012f9657e3e1a07" class="hlink">《借款协议》</a></p>
+				</form>
+				<div class="baseh bgf4 bt1 bb1 mt-15"></div>
+			</div>
+			<ul class="m-listview">
+				<li><a class="item" href="../../help/security"><h2>保障方式</h2><p>资金安全保障计划</p><i class="iconfont icon2">&#xe604;</i></a></li>
+				<li><a class="item" href="../../invest/details/bd0bf4adfd404a028012f9657e3e1a07"><h2>项目详情</h2><p>项目介绍、风控信息、投资记录</p><i class="iconfont icon2">&#xe604;</i></a></li>
+			</ul>
+	  	 </div>
+	</div>
+<footer class="g-footer">
+	<div class="m-footer clearfix">
+	     <a href="../index.html" id="nav_home"><i class="iconfont">&#xe619;</i><h2>首页</h2></a>
+	     <a href="../invest/invest_list.html" id="nav_tz"><i class="iconfont">&#xe618;</i><h2>投资</h2></a>
+	     <a href="../login.html" id="nav_user"><i class="iconfont">&#xe61a;</i><h2>账户</h2></a>
+	     <a href="../help/security.html" id="nav_help"><i class="iconfont">&#xe61b;</i><h2>帮助</h2></a>
+	</div>
+</footer>
+</div>
+<div class="m-layer mask" id="layer1">
+	<div class="bd">
+		<div class="closebtn" onclick="closelayer()"><i class="iconfont">&#xe610;</i></div>
+		<div class="m-poject-confirm pd-20">
+			<div class="tiphd">确认支付</div>
+			<ul class="itemlist bt1 bb1 clearfix">
+				<li><span class="c-999">投资金额</span></li>
+				<li id="txtInvestAmt">1000元</li>
+				<li><span class="c-999">项目期限</span></li>
+				<li>3月</li>
+			</ul>
+			<div class="mt-10"><a href="javascript:doInvest();" id="btnInvest" class="btn btn-orange btn-block size-XL">确定</a></div>
+		</div>
+	</div>
+</div>
+<div class="m-layer mask" id="vouchercontent">
+	<div class="m-voucher" id="voucherbox">
+		<ul class="m-voucher-list" id="voucher_list">
+			<li>
+				<a href="javascript:;" class="link first" data-id="0">
+					<div class="l40">投资金额满足条件可使用多张红包</div>
+				</a>
+			</li>
+				<li onclick="voucherClick(this)" data-id="a7dd261349f643529086846db2ce59e5" data-amt="10">
+				<a href="javascript:void(0);" class="link">
+					<div class="checkboxdiv">
+						<div class="u-checkbox-orange2">
+						<input type="checkbox" class="icheck_flat2" name="voucher" value="a7dd261349f643529086846db2ce59e5" data-amt="10" data-min="100"  input-checked="false">
+						</div>
+					</div>
+				<p><em>10</em>元红包（投资<em>100</em>元可用）</p>
+				<p><span class="gray">2016-04-22 23:59到期</span><span class="c-red pl-10"></span></p>
+				</a>
+			</li>
+		</ul>
+		<a href="javascript:void(0);" onclick="closelayer()" class="m-voucher-close">×</a>
+	</div>
+</div>
+<div class="m-layer" id="successTip">
+	<div class="m-result w80">
+	   <div class="tip1">
+	     <div class="hd">投资<span id="successje">1231.22</span>元成功！</div>
+	     <p class="stepicon">起息时间：项目售罄后次日</p>
+	   </div>
+	   <div class="bonus mt-20" id="getCouponDiv" style="display: none;">
+	   		<div class="bonushd">已完成了首次投资，获得新手福利<span class="orange"><font id="getCouponAmt">100</font>元红包</span></div>
+	   		<div class="bonusdesc">注：投资3个月及以上项目，满5000元即可返现红包在领取后30天内使用有效</div>
+	   </div>
+	   <div class="bonus mt-20" id="getPrivileDiv" style="display: none;">
+	   		<div class="bonushd">恭喜您获得专享额度<span class="orange"><font id="getPrivileAmt">100</font>元</span></div>
+	   		<div class="bonusdesc">注：专享额度可投10天，20%年化的专享项目哦</div>
+	   </div>
+	   <div class="bonus mt-20" id="getUserPrivileDiv" style="display: none;">
+	   		<div class="bonushd">还款监督专享项目，您还有<span class="orange"><font id="getUserPrivileAmt">100</font>元额度哦</span></div>
+	   </div>
+       <div class="mt-30"><a href="../../invest/loan/bd0bf4adfd404a028012f9657e3e1a07"  class="btn btn-orange size-XXL btn-block">继续投资</a></div>
+       <div class="mt-20"><a href="../login.html" class="btn btn-blue size-XXL btn-block">返回我的账户</a></div>
+	</div> 
+</div> 
+<script type="text/javascript" src="../../lib/jquery.min.js?v=20160120"></script>
+<script type="text/javascript" src="../../lib/layer/layer.m.js?v=20160120"></script>
+<script type="text/javascript" src="../../js/public.js?v=20160120"></script>  <script type="text/javascript" src="../../js/invest/invest_info.js?v=2016-03-23 10:28:36"></script>
+<script>
+$(function(){
+	$("#nav_tz").addClass("on");
+	initPCircle();
+})
+
+function initPCircle(){
+	var canvas=document.getElementById('canvas');
+	canvas.width=240;
+	canvas.height=160;
+	var cxt=canvas.getContext('2d');
+	fillPCircle(cxt,120,95,80,95,1);//灰色圈
+	fillPCircle(cxt,120,95,80,95,(parseFloat(100)/100),"#54abfc");//进度圈
+ }
+function fillPCircle(cxt,x,y,r,R,percent,fillColor){//cxt
+    cxt.save();
+    cxt.translate(x,y);
+    var radian=0.8+1.4*percent;//弧度
+	cxt.beginPath();
+	cxt.arc((r+R)/2*Math.cos(0.8*Math.PI),(r+R)/2*Math.sin(0.8*Math.PI),(R-r)/2,1.75*Math.PI,0.8*Math.PI,false) ;
+	cxt.arc(0,0,R,0.8*Math.PI,radian*Math.PI,false) ;
+	cxt.arc((r+R)/2*Math.cos(radian*Math.PI),(r+R)/2*Math.sin(radian*Math.PI),(R-r)/2,1.75*Math.PI,0.8*Math.PI,false) ;
+	cxt.arc(0,0,r,radian*Math.PI,0.8*Math.PI,true) ;
+    cxt.fillStyle=fillColor||"#f2f2f2";
+    cxt.fill();
+    cxt.restore();
+}
+</script>
+</body>
+</html>

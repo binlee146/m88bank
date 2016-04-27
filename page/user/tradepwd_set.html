@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>设置交易密码 - e路同心手机官网</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta charset="UTF-8">
+<meta name="author" content="e路同心,88bank.com，深圳市同心科创金融服务有限公司" />
+<meta name="keywords" content="e路同心，P2P理财平台，高收益，安全有保障，互联网金融">
+<meta name="description" content="e路同心是总部位于深圳的一家国资背景互联网金融P2P理财平台，致力于为中小企业和个人投资者提供投融资信息中介服务。平台与优质小贷公司紧密合作，通过安全稳定的互联网平台实现跨区域资源配置的匹配与撮合，致力于为中小企业提供融资新渠道，并为个人提供创新型投资理财服务。">
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="Bookmark" href="../../favicon.ico">
+<link rel="Shortcut Icon" href="../../favicon.ico" />
+<link rel="stylesheet" type="text/css" href="../../css/main/global.css?v=20160318"/>
+<link rel="stylesheet" type="text/css" href="../../css/main/public.css?v=20160322"/>
+<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css?v=20160311" />
+<script type="text/javascript">
+	var basePath = '../..';
+</script>
+</head> 
+<body>
+<div class="m-page bgf4 pb-60 wp">
+  <header class="g-header">
+    <div class="baseh"></div>
+  </header>
+  <div class="g-mainer w94 bgfff">
+    <div class="m-mainer">
+      <div class="tradepwd">
+        <div class="m-hdtip">
+          <div class="hd">交易密码用于充值、提现</div>
+          <div class="bd">以保障您的账户资金安全</div>
+        </div>
+        <div class="m-form w90 pb-50">
+          <div class="formline formline2">
+            <span class="ttlabel">交易密码</span>
+            <input type="password" id="password" name="password" class="input-text label4 size-L" placeholder="请设置6~20位的交易密码" onblur="checkPassword()" autocomplete="off"  maxlength="20" onkeyup="value=value.replace(/[\u4E00-\u9FA5]/g,'')">
+         	<a href="javascript:changePwdType();" class="pwdeye c-999"><i class="iconfont">
+                            &#xe60e;</i></a>
+          </div>
+          <div class="f-14 l30 mt-10"><span class="infotip">请勿与登录密码一致</span></div>
+          <div class="ft w84 mt-30">
+            <p id="warn1" class="pb-10 f-14"></p><!-- 友情提示 -->
+            <p id="error1" class="pb-10 f-14"></p><!-- 错误提示 -->
+            <div class="formline">
+              <button type="button" id="submit" class="btn btn-orange size-XL btn-block" onclick="onSubmit()">设置</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="g-extra baseh bgf4"></div>
+<footer class="g-footer">
+	<div class="m-footer clearfix">
+	     <a href="../index.html" id="nav_home"><i class="iconfont">&#xe619;</i><h2>首页</h2></a>
+	     <a href="../invest/invest_list.html" id="nav_tz"><i class="iconfont">&#xe618;</i><h2>投资</h2></a>
+	     <a href="../login.html" id="nav_user"><i class="iconfont">&#xe61a;</i><h2>账户</h2></a>
+	     <a href="../help/security.html" id="nav_help"><i class="iconfont">&#xe61b;</i><h2>帮助</h2></a>
+	</div>
+</footer>
+</div>
+<script type="text/javascript" src="../../lib/jquery.min.js?v=20160120"></script>
+<script type="text/javascript" src="../../lib/layer/layer.m.js?v=20160120"></script>
+<script type="text/javascript" src="../../js/public.js?v=20160120"></script><script>
+$(function(){
+	$("#nav_user").addClass("on");
+})
+
+	function changePwdType() {
+		var _this = $("#password");
+		var _type = _this.attr("type");
+		var _change = (_type == "password") ? "text" : "password";
+		if (_type == "password") {
+			$(".pwdeye").addClass("c-orange").removeClass("c-999");
+		} else {
+			$(".pwdeye").removeClass("c-orange").addClass("c-999");
+		}
+		_this.attr("type", _change);
+	}
+
+	/*2.1 验证交易密码*/
+	function checkPassword() {
+		var _input = $('#password');
+		var _tip = $("#error1");
+		var _val = $.trim(_input.val());
+		_tip.html("");
+		if (_val == "") {
+			_tip.html('<span class="errortip">交易密码不能为空</span>');
+			return false;
+		} else if (_val.length<6||_val.length>20) {
+			_tip.html('<span class="errortip">交易密码格式错误， 6-20个字符</span>');
+			return false;
+		}
+		return true;
+	}
+	/*2.3 表单提交*/
+	function onSubmit() {
+		if (checkPassword()) {
+			var pwd = $("#password").val();
+			var jsonstr = '{"tranPwd":"' + pwd + '"}';
+			$.ajax({
+				url : "../../accountmgr/trapwd/set/action",
+				type : 'POST',
+				data : {
+					"tranPwd" : pwd
+				},
+				dataType : 'json',
+				cache : false,
+				async : true,
+				success : function(data) {
+					var result = $.parseJSON(data);
+					if (result.success) {
+						jumps(3, "#num",
+								"../user/account_view.html");
+					} else {
+						$("#error1").show();
+						$("#error1").html('<span class="errortip">'+result.msg+'</span>');
+					}
+				}
+			});
+		}
+	}
+</script>
+</body>
+</html>

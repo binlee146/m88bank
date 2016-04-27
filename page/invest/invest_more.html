@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>项目详情 - e路同心手机官网</title>
+	<#include "/includes/style.html" />
+	 <link href="${tx.getContextPath()}/css/main/project.css?v=05" rel="stylesheet" type="text/css"/>
+</head> 
+<body class="bgf4">
+<!-- 顶部栏 -->
+<div class="m-page wp pb-60 bgfff">
+	<div class="g-mainer">
+		<div class="m-mainer pt-10" id="mainer">
+			<ul class="m-navtab w82">
+		  	 	<li><a href="javascript:;">项目介绍</a></li>
+		  	 	<li><a href="javascript:;">风控信息</a></li>
+		  	 	<li><a href="javascript:;">回款计划</a></li>
+		  	 	<li><a href="javascript:;" id="liInvestRecord">投资记录</a></li>
+		  	 </ul>
+		  	 <input type="hidden" id="loanId" value="${(webLoanMainInfoVo.loanId)!''}" />
+		  	 <ul class="projectdesc">
+		  	 	<li class="pd-15" id="1">
+		  	 		<div class="m-project-desc">
+		  	 		<#if (prdInfo)?? && prdInfo.loanType =='0'>
+		  	 			<div class="hd">借款人信息</div>
+		  	 			<div class="bd">
+		  	 				<table class="table table-jkxx">
+		  	 					<tr><td>姓名</td><td>${(userInfo.userNameStr)!''}</td><td>公司行业</td><td>${(userDtlInfo.companyIndustry)!''}</td></tr>
+		  	 					<tr><td>性别</td><td>${(userInfo.userSexStr)!''}</td><td>公司名称</td><td>${(userDtlInfo.companyNameStr)!''}</td></tr>
+		  	 					<tr><td>学历</td><td>${(userDtlInfo.degreeStr)!''}</td><td>公司地址</td><td>${(userDtlInfo.companyAddressStr)!''}</td></tr>
+		  	 					<tr><td>婚姻</td><td>${(userDtlInfo.marriageStr)!''}</td><td>职位级别</td><td>${(userDtlInfo.post)!''}</td></tr>
+		  	 					<tr><td>地址</td><td>${(userDtlInfo.contactAddressStr)!''}</td><td>身 份 证</td><td>${(userInfo.userIdnoStr)!''}</td></tr>
+		  	 				</table>
+		  	 			</div>
+		  	 		<#elseif (prdInfo)?? && prdInfo.loanType =='1'>
+		  	 			<div class="hd">企业信息</div>
+		  	 			<div class="bd">
+		  	 				<table class="table table-jkxx">
+		  	 					<tr><td>企业名称</td><td>${(companyInfo.companyNameStr)!''}</td><td>公司性质</td><td>${(companyDtlInfo.companyNatureStr)!''}</td></tr>
+		  	 					<tr><td>注册资本</td><td>${(((companyInfo.registerCapital)!0)/10000)!0}万元</td><td>净资产</td><td>${(((companyDtlInfo.netAsset)!0)/10000)!0}万元</td></tr>
+		  	 					<tr><td>每月营收</td><td>${(((companyDtlInfo.monthIncome)!0)/10000)!0}万元</td><td>公司地址</td><td>${(companyDtlInfo.companyAddressStr)!''}</td></tr>
+		  	 				</table>
+		  	 			</div>
+		  	 		</#if>
+						<div class="hd">借款描述</div>
+						<div class="bd">
+							<p class="textIndent2">${(webLoanMainInfoVo.loanRemark)!''}</p>
+						</div>
+						<div class="hd mt-15">还款来源</div>
+						<div class="bd">
+							<p>${(webLoanMainInfoVo.repaySource)!''}</p>
+						</div>
+						<div class="hd mt-15">合作机构</div>
+						<div class="bd">
+							<p class="textIndent2">${(webLoanMainInfoVo.orgRemark)!''}</p>
+						</div>
+						<#if (prdInfo)?? && prdInfo.loanType =='2'>
+							<div class="hd mt-15">资产信息</div>
+							<div class="bd">
+								<table class="table table-project">
+									<tr><th class="title">债权编号</th><th>借款人</th><th>债权本金</th></tr>
+								<#list loanAssetsDtlInfos as ladis>
+	            				<#if ladis_index ==0 >
+									<tr><td class="title">${(ladis.assetsNo)!''}</td><td>${(ladis.borrowNameStr)!''}</td><td>${(ladis.loanAmt?string(',##0'))!''}</td></tr>
+								</#if>
+	            				</#list>
+								</table>
+							</div>
+						</#if>
+					</div>
+		  	 	</li>
+		  	 	<li class="pd-15" id="2">
+					<div class="m-project-desc">
+						<div class="hd">担保机构</div>
+						<div class="bd">
+							<div class="pl-20">
+							<#if (webLoanMainInfoVo.orgDbLogo)?? && webLoanMainInfoVo.orgDbLogo?length gt 0>
+								<img src="${(webLoanMainInfoVo.orgDbLogo)!''}" height="40">
+							<#else>
+								<img src="${(webLoanMainInfoVo.orgMaxLogo)!''}" height="40">
+							</#if>
+							
+							</div>
+						</div>
+						<div class="hd mt-15">审核信息</div>
+						<div class="bd">
+							<table class="table table-project">
+								<tr><th class="title" width="40%">认证项</th><th width="35%">认证时间</th><th width="25%">状态</th></tr>
+								<#if (prdInfo)?? && (prdInfo.loanType)?? && prdInfo.loanType=='0'>
+									<tr><td class="title">身份证明</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">工作认证</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">居住认证</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">收入证明</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">社保证明</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">征信报告</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+								<#elseif (prdInfo)?? && (prdInfo.loanType)?? && prdInfo.loanType=='1'>
+									<tr><td class="title">工商执照</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">经营场所</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">银行流水</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">账务报表</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">征信报告</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+								<#else>
+									<tr><td class="title">营业执照</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">财务报表</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">税务登记证</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">组织机构代码</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+									<tr><td class="title">债权信息</td><td>${(webLoanMainInfoVo.auditTime?string('yyyy-MM-dd'))!''}</td><td><i class="iconfont orange">&#xe601;</i></td></tr>
+								</#if>
+								
+							</table>
+						</div>
+						<div class="hd mt-15">资金保障</div>
+						<div class="bd">
+							<ul class="securitylist">
+								<#if (prdInfo)?? && (prdInfo.ensureNames)??>
+		    					<#list prdInfo.ensureNames?split(' ') as ens>
+		    						<li>${ens}</li>
+		    					</#list>
+		    					</#if>
+		    				</ul>
+						</div>
+					</div>
+				</li>
+		  	 	<li class="pd-15" id="3">
+		  	 		<div class="desc1">共<span class="orange">${(loanRepaymentPlans?size)!'0'}</span>期<div class="pos-r f-12 c-999">注：此为项目预期还款计划</div></div>
+		  	 		<table class="table table-project mt-5">
+						<tr>
+							<th>期次</th>
+							<th>还款时间</th>
+							<th>应还本息</th>
+							<th>还款状态</th>
+						</tr>
+		  	 		<#if (loanRepaymentPlans)??>
+					<#list loanRepaymentPlans as lrps>
+						<tr>
+							<td>${(lrps.planPeriod)!''}</td>
+							<td>${(lrps.periodEndTime?string('yyyy-MM-dd'))!''}</td>
+							<td>${(((lrps.planPayPrincipalInterest)!0)?string("#,##0.00"))!'0.00'}</td>
+							<td>${(lrps.repaymentStatusStr)!''}</td>
+						</tr>
+					</#list>
+					</#if>
+					</table>
+		  	 	</li>
+		  	 	<li class="pd-15" id="4">
+		  	 		<div class="desc1">加入人次：<span class="orange">${(webLoanMainInfoVo.investLimit)!'0'}</span></div>
+					<table class="table table-project mt-5">
+					<thead>
+						<tr><th>投标人</th><th>投标金额</th><th>投标时间</th></tr>
+					</thead>
+					<tbody id="templateList" class="templateList">
+						<tr id="trTemplate" style="display: none;"><td id="txtUserName">136******06</td><td id="txtInvestAmt">28.00</td><td id="txtInvestTime">2015-11-22</td></tr>
+					</tbody>
+					</table>
+					<div class="text-c pd-10" id="next_list" onclick="initNextData();" style="display:none;"><button type="button" class='btn btn-more'>加载更多>></button></div>
+				</li>
+		  	 </ul>
+		</div>
+	</div>
+	<#include "/includes/footer.html" />
+</div>
+<#include "/includes/script.html" />
+<!-- <script type="text/javascript" src="${tx.getContextPath()}/lib/TouchSlide.1.1.js"></script> -->
+<script type="text/javascript" src="${tx.getContextPath()}/lib/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="${tx.getContextPath()}/js/invest/invest_detailts.js?v=${.now}"></script>
+<script>
+//TouchSlide({slideCell:"#mainer",effect:"leftLoop",titCell:".m-navtab li",mainCell:".projectdesc"});
+$(function(){
+	$("#nav_tz").addClass("on");
+})
+</script>
+</body>
+</html>

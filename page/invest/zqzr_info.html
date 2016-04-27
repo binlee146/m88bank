@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>债权转让 - e路同心手机官网</title>
+	<#include "/includes/style.html" />
+	<link href="${tx.getContextPath()}/css/main/project.css?v=01" rel="stylesheet" type="text/css"/>
+</head> 
+<body>
+<!-- 顶部栏 -->
+<div class="m-page wp pb-60">
+	<div class="g-mainer">
+		<div class="m-mainer">
+			<div class="m-project-circle zqzr">
+				<div class="bd">
+					<div class="title">原年化利率<span class="other"><span class="u-label u-label-orange2">让利${((view.discountScale!0)*100)?string('0.00')}%</span></span></div>
+					<div class="rate"><em>${(webLoanMainInfoVo.platRate)!'0'}</em>%</div>
+				</div>
+				<ul class="mn clearfix">
+					<li class="br1 w25"><div class="money">${(view.remainPeriod)!'0'}月</div>
+						  <div class="desc">剩余期限</div>
+					</li>
+					<li class="br1"><div class="money">${(view.transferPrice?string(',###.00'))!'0.00'}元</div>
+						  <div class="desc">转让价格</div>
+					</li>
+					<li>
+					<#if (view.applyStatus)?? && view.applyStatus=='2'>
+						<div class="money">${(view.expectIncome?string(',##0.00'))!'0.00'}元</div>
+						<div class="desc">预期收益</div>
+					<#else>
+						<div class="bidstatus"><i class="status8"></i></div>
+					</#if>
+					</li>
+				</ul>
+			</div>
+			<div class="baseh bgf4"></div>
+			<div class="m-listview">
+				<ul class="bt1">
+					<li><div class="item"><h2>项目名称</h2>
+					<p>${(webLoanMainInfoVo.productName)!''}<span class="f-12 c-999">${(webLoanMainInfoVo.loanNo)!''}</span>
+						<span class="company"><img src="${(webLoanMainInfoVo.orgMinLogo)!''}">${(webLoanMainInfoVo.abbreviation)!''}&nbsp;推荐</span>
+					</p></div></li>
+					<li><a class="item" href="javascript:;"><h2>债权价值</h2><p>${(view.debtWorth?string(',##0.00'))!'0.00'}元</p></a></li>
+					<li><a class="item" href="javascript:;"><h2>还款方式</h2><p>${(webLoanMainInfoVo.repayModeStr)!''}</p></a></li>
+				</ul>
+				<#if _p2p_member_user?? && (view.applyStatus)?? && view.applyStatus=='2'>
+				<div class="m-project-form pt-15">
+					<form action="" class="m-form w80">
+						<input type="hidden" value="${(view.transferApplyId)!''}" name="transferApplyId"/>
+		    		    <input type="hidden" value="${(view.transferPrice)!'0.00'}" name="transferPrice"/>
+		    		    <input type="hidden" value="${(availableAmt)!0}" name="availableAmt" />
+						<div class="money">可用余额&nbsp;<em>${(availableAmt?string(',##0.00'))!'0.00'}元</em><a href="${tx.getContextPath(user/recharge.html" class="btn btn-orange2 btn-cz ml-40">充值</a></div>
+						<div class="formline mt-5">
+							<button type="button" class="btn btn-orange size-XL btn-block" onclick="buy()">立即购买</button>	
+						</div>
+						<div id="error1" class="f-14"></div><!-- 错误提示 -->
+						<p class="f-12">点击立即购买即代表您同意<a href="${tx.getContextPath()}/agreement/${(view.transferApplyId)!''}" class="hlink">《债权转让协议》</a></p>
+					</form>
+					<div class="baseh bgf4 bt1 bb1 mt-15"></div>
+				</div>
+				</#if>
+				<ul class="m-listview">
+					<li><a class="item pl-20" href="${tx.getContextPath()}/help/security"><p>资金安全保障计划</p><i class="iconfont icon2">&#xe604;</i></a></li>
+					<li><a class="item pl-20" href="${tx.getContextPath()}/invest/details/${(webLoanMainInfoVo.loanId)!''}"><p>查看原项目详情</p><i class="iconfont icon2">&#xe604;</i></a></li>
+					<!-- 募集完成 -->
+					<#if _p2p_member_user?? && (view.applyStatus)?? && view.applyStatus=='3'>
+					<li><div class="item"><h2>可用余额</h2><p>${(availableAmt?string(',##0.00'))!'0.00'}元</p>
+						<div class="pos-r"><a href="${tx.getContextPath(user/recharge.html" class="btn btn-orange2 btn-cz">充值</a></div>
+					</div></li>
+					</#if>
+				</ul>
+			</div>
+			<#if !_p2p_member_user?? && (view.applyStatus)?? && view.applyStatus=='2'>	
+			<div class="w80 pt-10 pb-10"><a href="${tx.getContextPath()}/secure/login?callbackUrl=/invest/transfer/${(view.transferApplyId)!''}" class="btn btn-orange btn-block size-XL">投资请登录</a></div>
+			</#if>
+	  	 </div>
+	</div>
+	<#include "/includes/footer.html" />
+</div>
+<div class="m-layer mask" id="layer1">
+	<div class="bd">
+		<div class="closebtn" onclick="closelayer()"><i class="iconfont">&#xe610;</i></div>
+		<div class="m-poject-confirm pd-20">
+			<div class="tiphd">确认支付</div>
+			<ul class="itemlist bt1 bb1 clearfix">
+				<li><span class="c-999">投资金额</span></li>
+				<li id="txtInvestAmt">${(view.transferPrice?string('0.00'))!'0.00'}元</li>
+				<li><span class="c-999">项目期限</span></li>
+				<li>${(view.remainPeriod)!'0'}月</li>
+			</ul>
+			<div class="mt-10"><a href="javascript:;" id="btnInvest" class="btn btn-orange btn-block size-XL">确定</a></div>
+		</div>
+	</div>
+</div>
+<div class="m-layer" id="successTip">
+	<div class="m-result w80">
+	   <div class="tip1">
+	     <div class="hd">投资<span id="successAmt">${(view.transferPrice?string('0.00'))!'0.00'}</span>元成功！</div>
+	   </div>
+	   <div class="bonus mt-20" id="getCouponDiv" style="display: none;">
+	   		<div class="bonushd">已完成了首次投资，获得新手福利<span class="orange"><font id="getCouponAmt">100</font>元红包</span></div>
+	   		<div class="bonusdesc">注：投资3个月及以上项目，满5000元即可返现红包在领取后30天内使用有效</div>
+	   </div>
+       <div class="mt-30"><a href="${tx.getContextPath(invest/zqzr_list.html"  class="btn btn-orange size-XXL btn-block">继续投资</a></div>
+       <div class="mt-20"><a href="${tx.getContextPath(login.html" class="btn btn-blue size-XXL btn-block">返回我的账户</a></div>
+	</div> 
+</div> 
+<#include "/includes/script.html" />
+<script type="text/javascript" src="${tx.getContextPath()}/js/invest/zqzr_info.js?v=20160120"></script>
+</body>
+</html>
